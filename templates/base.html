@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock title %} - blog</title>
+    <link rel="icon" href="{{ url_for('static', filename='书签.ico') }}">
+    {% block css %}{% endblock css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+{% endblock head %}
+
+</head>
+<body>
+{% block body %}
+{% block nav %}
+<nav class="navbar navbar-default">
+  <ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation"><a href="#">About</a></li>
+</ul>
+</nav>
+{% endblock nav %}
+
+{% block content %}{% endblock content %}
+
+
+{% endblock body %}
+
+{% block scripts %}{% endblock scripts %}
+
+</body>
+</html>
